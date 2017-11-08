@@ -1,0 +1,20 @@
+<div>
+  <div class="searchBox">
+    <input
+      type='text'
+      placeholder='City'
+      [(ngModel)]="searchText"
+      (keypress)="fetchWeather($event)"
+    />
+
+    <div>
+      <button (click)="fetchWeather($event)" [disabled]="loading">
+        {{loading ? 'Loading...' : 'Get weather'}}
+      </button>
+    </div>
+
+    <div *ngIf="error">Error trying to fetch a forecast</div>
+  </div>
+
+  <app-weather-card *ngFor="let weather of weatherList;"></app-weather-card>
+</div>
