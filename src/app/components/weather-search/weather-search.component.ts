@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { WeatherService } from '../../services/weather.service';
 
 @Component({
   selector: 'app-weather-search',
@@ -13,7 +14,7 @@ export class WeatherSearchComponent implements OnInit {
   searchText: String;
   weatherList: any[];
 
-  constructor() {
+  constructor(private weatherService: WeatherService) {
     this.error = false;
     this.loading = false;
     this.searchText = '';
@@ -24,7 +25,8 @@ export class WeatherSearchComponent implements OnInit {
   }
 
   fetchWeather() {
-    console.log(`Text: ${this.searchText}`)
+    console.log(`Text: ${this.searchText}`);
+    this.weatherService.getWeather(this.searchText).subscribe( data => console.log(data) );
   }
 
 }
