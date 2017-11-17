@@ -4,7 +4,7 @@
       type='text'
       placeholder='City'
       [(ngModel)]="searchText"
-      (keypress)="fetchWeather($event)"
+      (keypress)="keyPressed($event)"
     />
 
     <div>
@@ -16,5 +16,7 @@
     <div *ngIf="error">Error trying to fetch a forecast</div>
   </div>
 
-  <app-weather-card *ngFor="let weather of weatherList;"></app-weather-card>
+  <div class="weatherList">
+    <app-weather-card *ngFor="let weather of weatherList$" [data]="weather"></app-weather-card>
+  </div>
 </div>
