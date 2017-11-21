@@ -32,10 +32,19 @@ export class WeatherSearchComponent implements OnInit {
 
   fetchWeather() {
     console.log(`Text: ${this.searchText}`);
-    this.weatherService.getWeather(this.searchText).subscribe( data => {
-      console.log(data);
-      this.weatherList$ = data.list;
-    });
+    this.error = false;
+    this.loading = true;
+    this.weatherService
+      .getWeather(this.searchText)
+      .subscribe( data => {
+          console.log(data);
+          this.weatherList$ = data.list;
+          this.loading = false
+        },
+        err => {
+          this.error = true;
+          this.loading = false;
+        });
   }
 
 }
