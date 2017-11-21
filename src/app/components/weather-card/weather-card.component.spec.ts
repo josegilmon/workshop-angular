@@ -20,6 +20,40 @@ describe('WeatherCardComponent', () => {
   });
 
   it('should create', () => {
+    component.weather = {
+      'id': 3117735,
+      'name': 'Madrid',
+      'coord': {
+          'lat': 40.4165,
+          'lon': -3.7026
+      },
+      'main': {
+          'temp': 11.25,
+          'pressure': 1020,
+          'humidity': 50,
+          'temp_min': 10,
+          'temp_max': 13
+      },
+      'dt': 1511033400,
+      'wind': {
+          'speed': 0.5
+      },
+      'sys': {
+          'country': 'ES'
+      },
+      'rain': null,
+      'snow': null,
+      'clouds': {
+          'all': 0
+      },
+      'weather': [{
+          'id': 800,
+          'main': 'Clear',
+          'description': 'Sky is Clear',
+          'icon': '01n'
+      }]
+    };
+
     expect(component).toBeTruthy();
   });
 });
