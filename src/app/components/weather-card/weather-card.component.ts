@@ -9,12 +9,9 @@ import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 export class WeatherCardComponent implements OnInit {
 
   @Input() data: any;
-  weather: any;
 
   constructor() { }
 
-  ngOnInit() {
-    this.weather = this.data.weather && this.data.weather[0];
-  }
+  ngOnInit() {}
 
 }
