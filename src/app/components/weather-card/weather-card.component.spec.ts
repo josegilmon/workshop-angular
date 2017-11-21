@@ -20,7 +20,7 @@ describe('WeatherCardComponent', () => {
   });
 
   it('should create', () => {
-    component.weather = {
+    component.data = {
       'id': 3117735,
       'name': 'Madrid',
       'coord': {
