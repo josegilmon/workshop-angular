@@ -39,7 +39,7 @@ export class WeatherSearchComponent implements OnInit {
       .subscribe( data => {
           console.log(data);
           this.weatherList$ = data.list;
-          this.loading = false
+          this.loading = false;
         },
         err => {
           this.error = true;
