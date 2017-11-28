@@ -8,7 +8,7 @@
     />
 
     <div>
-      <button (click)="fetchWeather($event)" [disabled]="loading">
+      <button (click)="fetchWeather()" [disabled]="loading">
         {{loading ? 'Loading...' : 'Get weather'}}
       </button>
     </div>
