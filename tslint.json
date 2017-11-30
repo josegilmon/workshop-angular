@@ -1,4 +1,5 @@
 {
+  "extends": "tslint-config-standard",
   "rulesDirectory": [
     "node_modules/codelyzer"
   ],
@@ -88,7 +89,7 @@
     "radix": true,
     "semicolon": [
       true,
-      "always"
+      "never"
     ],
     "triple-equals": [
       true,
