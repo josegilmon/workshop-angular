@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core'
 
 @Component({
   selector: 'app-weather-card',
@@ -8,10 +8,10 @@ import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 })
 export class WeatherCardComponent implements OnInit {
 
-  @Input() data: any;
+  @Input() data: any
 
-  constructor() { }
+  constructor () { }
 
-  ngOnInit() {}
+  ngOnInit () {}
 
 }
