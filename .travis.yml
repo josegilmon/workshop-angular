@@ -12,7 +12,7 @@ cache:
     - node_modules
  
 script:
-  - npm run build.prod
+  - npm run build
  
 deploy:
   provider: pages
