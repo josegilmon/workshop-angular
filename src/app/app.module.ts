@@ -1,27 +1,27 @@
-import { BrowserModule } from '@angular/platform-browser'
-import { NgModule } from '@angular/core'
-import { FormsModule } from '@angular/forms'
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
-import { AppComponent } from './app.component'
-import { WeatherSearchComponent } from './components/weather-search/weather-search.component'
-import { WeatherCardComponent } from './components/weather-card/weather-card.component'
-import { WeatherService } from './services/weather.service'
-import { HttpClientModule } from '@angular/common/http'
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { WeatherCardComponent } from './components/weather-card/weather-card.component';
+import { WeatherSearchComponent } from './components/weather-search/weather-search.component';
+import { WeatherService } from './services/weather.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WeatherSearchComponent,
-    WeatherCardComponent
+    WeatherCardComponent,
+    WeatherSearchComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpClientModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [
-    WeatherService
-  ],
+  providers: [WeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
